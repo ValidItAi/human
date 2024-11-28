@@ -127,8 +127,8 @@ export async function check(instance: Human, force = false) {
             log('override: backend set to webgpu but browser reports no available gpu');
             instance.config.backend = 'webgl';
           } else {
-            // @ts-ignore requestAdapterInfo is not in tslib
-            const adapterInfo = 'requestAdapterInfo' in adapter ? await adapter.requestAdapterInfo() : undefined;
+            // @ts-ignore GPUAdapterInfo is not in tslib
+            const adapterInfo = 'info' in adapter ? await adapter.info : undefined;
             // if (adapter.features) adapter.features.forEach((feature) => log('webgpu features:', feature));
             log('webgpu adapter info:', adapterInfo);
           }

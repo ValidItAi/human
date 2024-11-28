@@ -154,7 +154,8 @@ export class Env {
     try {
       if (this.webgpu.supported) {
         const adapter = await navigator.gpu.requestAdapter();
-        this.webgpu.adapter = await adapter?.requestAdapterInfo();
+        // @ts-ignore GPUAdapterInfo is not in tslib
+        this.webgpu.adapter = await adapter?.info;
       }
     } catch {
       this.webgpu.supported = false;
