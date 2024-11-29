@@ -9,6 +9,11 @@
   
 ## Changelog
   
+### **HEAD -> main** 2024/11/29 anaelshomrai@gmail.com
+
+- rm more
+- rm requestadapterinfo
+
 ### **release 3.3.6** 2024/11/28 anaelshomrai@gmail.com
 
 - fix unsuportted requeste adatper info
