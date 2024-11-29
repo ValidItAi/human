@@ -26017,7 +26017,7 @@ dm() && tu("webgpu", async () => {
   e.features.has("timestamp-query") && o.push("timestamp-query"), e.features.has("bgra8unorm-storage") && o.push(["bgra8unorm-storage"]), t10.requiredFeatures = o;
   let n = e.limits;
   t10.requiredLimits = { maxComputeWorkgroupStorageSize: n.maxComputeWorkgroupStorageSize, maxComputeWorkgroupsPerDimension: n.maxComputeWorkgroupsPerDimension, maxStorageBufferBindingSize: n.maxStorageBufferBindingSize, maxBufferSize: n.maxBufferSize, maxComputeWorkgroupSizeX: n.maxComputeWorkgroupSizeX, maxComputeInvocationsPerWorkgroup: n.maxComputeInvocationsPerWorkgroup };
-  let s = await e.requestDevice(t10), a = "info" in e ? e.info : "requestAdapterInfo" in e ? await e.requestAdapterInfo() : void 0;
+  let s = await e.requestDevice(t10), a = "info" in e ? e.info : "info" in e ? await e.info : void 0;
   return new jc(s, a);
 }, 3);
 var fe;
@@ -33420,7 +33420,7 @@ async function loadModel(modelPath) {
 }
 
 // package.json
-var version = "3.3.5";
+var version = "3.3.6";
 
 // src/tfjs/humangl.ts
 var config2 = {
